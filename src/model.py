@@ -49,19 +49,6 @@ class ModelNew(nn.Module):
         res_list = res_list.to('cuda:0') 
         vina = vina.to('cuda:0')
 
-
-        """ import pickle
-        datas=str(ga.ndata['feat'].tolist())
-        with open("/opt/data/private/pdb20_8/eva/atom.pkl", "wb") as f:
-            pickle.dump(datas, f) 
-        print("ok")  """
-
-
-        print("11111")
-
-
-
-
         va_init = self.a_init(ga.ndata['feat'])#num_atom,120
         #print("va_init",va_init.shape) 
         ea = self.b_init(ga.edata['feat'])  #num_atom_edge,8
